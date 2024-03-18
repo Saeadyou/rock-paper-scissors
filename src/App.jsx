@@ -2,6 +2,10 @@ import { useState } from "react";
 import Header from "./components/Header";
 import RulesButton from "./components/RulesButton";
 import Modal from "./components/Modal";
+import Step1 from "./pages/Step1";
+import Step2 from "./pages/Step2";
+import Csissors from "./components/Csissors";
+import Rock from "./components/Rock";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -9,25 +13,21 @@ function App() {
     <>
       {showModal && <Modal showModal={showModal} setShowModal={setShowModal} />}
       <Header />
-      <main>
-        <img
-          src="/images/bg-triangle.svg"
-          alt="triangle"
-          className="absolute left-1/2 top-72 w-56 -translate-x-1/2"
-        />
-        <div className="absolute left-1/2 top-56 flex h-32 w-32 -translate-x-40 items-center justify-center rounded-full border-[1rem] border-blue-500 bg-white shadow-[inset_0px_5px_0px_0px_#dedede,0px_5px_0px_0px_#1D57F6]">
-          <img src="/images/icon-paper.svg" alt="icon-paper" className="h-12" />
+
+      {/* <Step1 /> */}
+      {/* <Step2 /> */}
+
+      <main className="absolute left-1/2 top-72 grid w-full -translate-x-1/2 grid-cols-3 gap-8 px-12">
+        <div className="text-center">You picked</div>
+        <div className="col-start-3 text-center">The house picked</div>
+        <Csissors className="mx-auto h-36 w-36" />
+        <div className="flex flex-col items-center justify-center">
+          <h1 className="text-center text-3xl font-bold">You lose</h1>
+          <button className="mt-2 bg-white px-8 uppercase text-gray-400">
+            Play again
+          </button>
         </div>
-        <div className="absolute left-1/2 top-56 flex h-32 w-32 translate-x-8 items-center justify-center rounded-full border-[1rem] border-yellow-500 bg-white shadow-[inset_0px_5px_0px_0px_#dedede,0px_5px_0px_0px_#CA9A07]">
-          <img
-            src="/images/icon-scissors.svg"
-            alt="icon-scissors"
-            className="h-12"
-          />
-        </div>
-        <div className="absolute left-1/2 top-56 flex h-32 w-32 -translate-x-1/2 translate-y-40 items-center justify-center rounded-full border-[1rem] border-red-500 bg-white shadow-[inset_0px_5px_0px_0px_#dedede,0px_5px_0px_0px_#C43838]">
-          <img src="/images/icon-rock.svg" alt="icon-rock" className="h-12" />
-        </div>
+        <Rock className="mx-auto h-36 w-36" winner />
       </main>
 
       <RulesButton setShowModal={setShowModal} />
