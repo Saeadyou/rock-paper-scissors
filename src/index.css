@@ -7,6 +7,8 @@
   font-weight: 400;
   text-transform: uppercase;
 
+  height: 100%;
+
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
@@ -22,9 +24,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   min-width: 320px;
-  min-height: 100vh;
+  width: 100%;
+  min-height: 100%;
   background: rgb(12, 0, 177);
   background: radial-gradient(
     at top,
@@ -77,4 +79,18 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.winner {
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(239, 239, 239, 0.1) 40%,
+    rgba(0, 0, 0, 0) 41%,
+    rgba(239, 239, 239, 0.05) 41%,
+    rgba(239, 239, 239, 0.1) 55%,
+    rgba(0, 0, 0, 0) 56%,
+    rgba(239, 239, 239, 0.05) 56%,
+    rgba(239, 239, 239, 0.1) 100%
+  );
 }
