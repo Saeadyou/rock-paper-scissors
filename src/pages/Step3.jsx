@@ -1,7 +1,10 @@
+import { useData } from "../contexts/DataContext";
 import Csissors from "../components/Csissors";
 import Rock from "../components/Rock";
 
 function Step3() {
+  const { setScore } = useData();
+
   return (
     <main className="absolute left-1/2 top-72 grid w-full -translate-x-1/2 grid-cols-3 gap-8 px-12">
       <div className="text-center">You picked</div>

@@ -1,4 +1,8 @@
-function RulesButton({ setShowModal }) {
+import { useData } from "../contexts/DataContext";
+
+function RulesButton() {
+  const { setShowModal } = useData();
+
   return (
     <button
       onClick={() => setShowModal(true)}

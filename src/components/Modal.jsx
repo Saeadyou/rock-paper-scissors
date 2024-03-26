@@ -1,4 +1,8 @@
-function Modal({ showModal, setShowModal }) {
+import { useData } from "../contexts/DataContext";
+
+function Modal() {
+  const { showModal, setShowModal } = useData();
+
   if (!showModal) return null;
 
   return (

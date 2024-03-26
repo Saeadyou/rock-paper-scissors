@@ -1,26 +1,23 @@
-import { useState } from "react";
-import Header from "./components/Header";
-import RulesButton from "./components/RulesButton";
-import Modal from "./components/Modal";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { DataProvider } from "./contexts/DataContext";
+import Layout from "./pages/Layout";
 import Step1 from "./pages/Step1";
 import Step2 from "./pages/Step2";
-import Csissors from "./components/Csissors";
-import Rock from "./components/Rock";
 import Step3 from "./pages/Step3";
 
 function App() {
-  const [showModal, setShowModal] = useState(false);
   return (
-    <>
-      {showModal && <Modal showModal={showModal} setShowModal={setShowModal} />}
-      <Header />
-
-      {/* <Step1 /> */}
-      {/* <Step2 /> */}
-      <Step3 />
-
-      <RulesButton setShowModal={setShowModal} />
-    </>
+    <DataProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Step1 />} />
+            <Route path="step2" element={<Step2 />} />
+            <Route path="step3" element={<Step3 />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </DataProvider>
   );
 }
 
