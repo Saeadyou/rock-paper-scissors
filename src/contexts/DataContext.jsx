@@ -4,6 +4,7 @@ const DataContext = createContext();
 
 function DataProvider({ children }) {
   const [mySelection, setMySelection] = useState("");
+  const [houseSelection, setHouseSelection] = useState("");
   const [score, setScore] = useState(0);
   const [showModal, setShowModal] = useState(false);
 
@@ -12,6 +13,8 @@ function DataProvider({ children }) {
       value={{
         mySelection,
         setMySelection,
+        houseSelection,
+        setHouseSelection,
         score,
         setScore,
         showModal,
