@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from "react";
 const DataContext = createContext();
 
 function DataProvider({ children }) {
-  const [mySelection, setMySelection] = useState("0");
+  const [mySelection, setMySelection] = useState("");
   const [score, setScore] = useState(0);
   const [showModal, setShowModal] = useState(false);
 

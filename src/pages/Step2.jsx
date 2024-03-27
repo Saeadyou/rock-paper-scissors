@@ -1,10 +1,12 @@
+import { useData } from "../contexts/DataContext";
 import Csissors from "../components/Csissors";
 import Paper from "../components/Paper";
 import Rock from "../components/Rock";
-import { useData } from "../contexts/DataContext";
 
 function Step2() {
   const { mySelection } = useData();
+  console.log(mySelection);
+
   return (
     <main className="absolute left-1/2 top-72 grid -translate-x-1/2 grid-cols-2 gap-8">
       <div className="text-center">You picked</div>
