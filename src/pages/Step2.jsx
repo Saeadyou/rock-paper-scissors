@@ -4,7 +4,8 @@ import { useData } from "../contexts/DataContext";
 import ShowSelectedItem from "../components/ShowSelectedItem";
 
 function Step2() {
-  const { mySelection, houseSelection, setHouseSelection } = useData();
+  const { mySelection, houseSelection, setHouseSelection, setShowWinner } =
+    useData();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -14,6 +15,7 @@ function Step2() {
 
       setTimeout(() => {
         navigate("/step3");
+        setShowWinner(true);
       }, 1000);
     }, 1000);
   }, []);

@@ -1,7 +1,9 @@
 import { useData } from "../contexts/DataContext";
 
 function Header() {
-  const { score } = useData();
+  const { score, point, showWinner } = useData();
+
+  if (showWinner) score.current += point;
 
   return (
     <header className="absolute left-1/2 top-10 flex w-[40rem] max-w-[80%] -translate-x-1/2 justify-between rounded-lg border-2 border-gray-500 p-4">
@@ -12,7 +14,9 @@ function Header() {
       </div>
       <div className="flex flex-col items-center justify-center rounded-md bg-white px-8">
         <span className="text-[.7rem] font-bold text-blue-500">Score</span>
-        <span className="text-4xl font-bold text-gray-600">{score}</span>
+        <span className="text-4xl font-bold text-gray-600">
+          {score.current}
+        </span>
       </div>
     </header>
   );

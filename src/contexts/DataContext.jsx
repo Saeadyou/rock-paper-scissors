@@ -1,12 +1,27 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useRef, useState } from "react";
 
 const DataContext = createContext();
 
 function DataProvider({ children }) {
   const [mySelection, setMySelection] = useState("");
   const [houseSelection, setHouseSelection] = useState("");
-  const [score, setScore] = useState(0);
   const [showModal, setShowModal] = useState(false);
+  const [showWinner, setShowWinner] = useState(false);
+  const score = useRef(0);
+
+  let point = 0;
+  if (mySelection === "rock") {
+    houseSelection === "paper" && --point;
+    houseSelection === "csissors" && ++point;
+  }
+  if (mySelection === "paper") {
+    houseSelection === "csissors" && --point;
+    houseSelection === "rock" && ++point;
+  }
+  if (mySelection === "csissors") {
+    houseSelection === "rock" && --point;
+    houseSelection === "paper" && ++point;
+  }
 
   return (
     <DataContext.Provider
@@ -15,10 +30,12 @@ function DataProvider({ children }) {
         setMySelection,
         houseSelection,
         setHouseSelection,
+        point,
         score,
-        setScore,
         showModal,
         setShowModal,
+        showWinner,
+        setShowWinner,
       }}
     >
       {children}
