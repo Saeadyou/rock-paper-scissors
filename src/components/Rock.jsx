@@ -5,15 +5,19 @@ function Rock({ className }) {
 
   return (
     <div
-      onClick={() => setMySelection("rock")}
-      className={`${className} flex h-32 w-32 items-center justify-center rounded-full border-[1rem] border-red-500 bg-white shadow-[inset_0px_5px_0px_0px_#dedede,0px_5px_0px_0px_#C43838]`}
+      className={`${className} flex h-32 w-32 items-center justify-center rounded-full bg-gradient-to-b from-[#DB2D4D] to-[#DD405D] shadow-[0px_5px_0px_0px_#B11F3A]`}
     >
-      {((mySelection === "rock" && houseSelection === "csissors") ||
-        (mySelection === "csissors" && houseSelection === "rock")) &&
-        showWinner && (
-          <div className="winner absolute h-96 w-96 rounded-full"></div>
-        )}
-      <img src="/images/icon-rock.svg" alt="icon-rock" className="h-12" />
+      <div
+        onClick={() => setMySelection("rock")}
+        className="flex h-24 w-24 items-center justify-center rounded-full bg-white shadow-[inset_0px_5px_0px_0px_#dedede]"
+      >
+        {((mySelection === "rock" && houseSelection === "csissors") ||
+          (mySelection === "csissors" && houseSelection === "rock")) &&
+          showWinner && (
+            <div className="winner absolute h-96 w-96 rounded-full"></div>
+          )}
+        <img src="/images/icon-rock.svg" alt="icon-rock" className="h-12" />
+      </div>
     </div>
   );
 }

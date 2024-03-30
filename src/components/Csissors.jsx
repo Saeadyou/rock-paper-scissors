@@ -5,19 +5,23 @@ function Csissors({ className }) {
 
   return (
     <div
-      onClick={() => setMySelection("csissors")}
-      className={`${className} flex h-32 w-32 items-center justify-center rounded-full border-[1rem] border-yellow-500 bg-white shadow-[inset_0px_5px_0px_0px_#dedede,0px_5px_0px_0px_#CA9A07]`}
+      className={`${className} flex h-32 w-32 items-center justify-center rounded-full bg-gradient-to-b from-[#EC9E0D] to-[#EBA822] shadow-[0px_5px_0px_0px_#B27C0F]`}
     >
-      {((mySelection === "csissors" && houseSelection === "paper") ||
-        (mySelection === "paper" && houseSelection === "csissors")) &&
-        showWinner && (
-          <div className="winner absolute h-96 w-96 rounded-full"></div>
-        )}
-      <img
-        src="/images/icon-scissors.svg"
-        alt="icon-scissors"
-        className="h-12"
-      />
+      <div
+        onClick={() => setMySelection("csissors")}
+        className="flex h-24 w-24 items-center justify-center rounded-full bg-white shadow-[inset_0px_5px_0px_0px_#dedede]"
+      >
+        {((mySelection === "csissors" && houseSelection === "paper") ||
+          (mySelection === "paper" && houseSelection === "csissors")) &&
+          showWinner && (
+            <div className="winner absolute h-96 w-96 rounded-full"></div>
+          )}
+        <img
+          src="/images/icon-scissors.svg"
+          alt="icon-scissors"
+          className="h-12"
+        />
+      </div>
     </div>
   );
 }

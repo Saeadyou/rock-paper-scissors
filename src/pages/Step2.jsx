@@ -18,7 +18,7 @@ function Step2() {
         setShowWinner(true);
       }, 1000);
     }, 1000);
-  }, []);
+  }, [setHouseSelection, setShowWinner, navigate]);
 
   return (
     <main className="absolute left-1/2 top-72 grid -translate-x-1/2 grid-cols-2 gap-8">

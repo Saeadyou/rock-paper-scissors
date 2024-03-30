@@ -3,11 +3,18 @@ import ShowSelectedItem from "../components/ShowSelectedItem";
 import { useNavigate } from "react-router-dom";
 
 function Step3() {
-  const { mySelection, houseSelection, point, setShowWinner } = useData();
+  const {
+    mySelection,
+    houseSelection,
+    point,
+    setShowWinner,
+    setHouseSelection,
+  } = useData();
   const navigate = useNavigate();
   function handleClick() {
     navigate("/");
     setShowWinner(false);
+    setHouseSelection("");
   }
 
   return (
@@ -17,14 +24,14 @@ function Step3() {
       <ShowSelectedItem selection={mySelection} />
       <div className="flex flex-col items-center justify-center">
         <h1 className="text-center text-3xl font-bold">
-          {point === 0 && "You draw 😐"}
-          {point > 0 && "You win 😍"}
-          {point < 0 && "You lose 😞"}
+          {point === 0 && "You draw😐"}
+          {point > 0 && "You win😍"}
+          {point < 0 && "You lose😞"}
         </h1>
 
         <button
           onClick={handleClick}
-          className="mt-2 bg-white px-8 uppercase text-gray-400"
+          className="mt-2 bg-white px-12 text-xs font-bold uppercase tracking-widest text-gray-400"
         >
           Play again
         </button>
