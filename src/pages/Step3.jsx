@@ -18,7 +18,7 @@ function Step3() {
   }
 
   return (
-    <main className="absolute left-1/2 top-72 grid w-full max-w-[40rem] -translate-x-1/2 grid-cols-2 grid-rows-3 gap-8 sm:top-60 sm:grid-cols-3 sm:grid-rows-2">
+    <main className="absolute left-1/2 top-72 grid w-full max-w-[40rem] -translate-x-1/2 grid-cols-2 grid-rows-[2fr_1fr_2fr] gap-8 sm:top-60 sm:grid-cols-3 sm:grid-rows-2">
       <div className="order-1 text-center sm:col-start-1 sm:row-start-1 sm:self-end">
         You picked
       </div>
