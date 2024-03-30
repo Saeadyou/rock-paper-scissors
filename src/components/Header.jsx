@@ -7,7 +7,7 @@ function Header() {
 
   return (
     <header className="absolute left-1/2 top-10 flex w-[40rem] max-w-[80%] -translate-x-1/2 justify-between rounded-lg border-2 border-[#606E85] p-4">
-      <div className="text-xs font-[700] tracking-tighter">
+      <div className="text-xs font-[700] tracking-tighter sm:text-sm">
         <h1>Rock</h1>
         <h1>paper</h1>
         <h1>scissors</h1>

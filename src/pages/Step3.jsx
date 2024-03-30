@@ -31,7 +31,7 @@ function Step3() {
 
         <button
           onClick={handleClick}
-          className="mt-2 bg-white px-12 text-xs font-bold uppercase tracking-widest text-gray-400"
+          className="mt-2 bg-white px-12 text-xs font-bold uppercase text-gray-400"
         >
           Play again
         </button>

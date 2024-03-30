@@ -21,9 +21,9 @@ function Step2() {
   }, [setHouseSelection, setShowWinner, navigate]);
 
   return (
-    <main className="absolute left-1/2 top-72 grid -translate-x-1/2 grid-cols-2 gap-8">
-      <div className="text-center">You picked</div>
-      <div>The house picked</div>
+    <main className="top-72 grid grid-cols-2 grid-rows-2 gap-8 sm:absolute sm:left-1/2 sm:-translate-x-1/2">
+      <div className="order-2 text-center sm:order-1">You picked</div>
+      <div className="order-2 text-center sm:order-1">The house picked</div>
       <ShowSelectedItem selection={mySelection} />
       {!houseSelection && (
         <div className="mx-auto my-auto h-28 w-28 rounded-full bg-[#00000030]"></div>
