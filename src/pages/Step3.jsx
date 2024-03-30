@@ -18,11 +18,17 @@ function Step3() {
   }
 
   return (
-    <main className="absolute left-1/2 top-72 grid w-full -translate-x-1/2 grid-cols-3 gap-8 px-12">
-      <div className="text-center">You picked</div>
-      <div className="col-start-3 text-center">The house picked</div>
-      <ShowSelectedItem selection={mySelection} />
-      <div className="flex flex-col items-center justify-center">
+    <main className="absolute left-1/2 top-72 grid w-full max-w-[40rem] -translate-x-1/2 grid-cols-2 grid-rows-3 gap-8 sm:top-60 sm:grid-cols-3 sm:grid-rows-2">
+      <div className="order-1 text-center sm:col-start-1 sm:row-start-1 sm:self-end">
+        You picked
+      </div>
+      <div className="order-1 text-center sm:col-start-3 sm:row-start-1 sm:self-end">
+        The house picked
+      </div>
+      <div className="sm:row-start-2">
+        <ShowSelectedItem selection={mySelection} />
+      </div>
+      <div className="order-2 col-span-2 flex flex-col items-center justify-center sm:col-span-1 sm:col-start-2 sm:row-start-2">
         <h1 className="text-center text-3xl font-bold">
           {point === 0 && "You draw😐"}
           {point > 0 && "You win😍"}
@@ -36,7 +42,9 @@ function Step3() {
           Play again
         </button>
       </div>
-      <ShowSelectedItem selection={houseSelection} />
+      <div className="sm:row-start-2">
+        <ShowSelectedItem selection={houseSelection} />
+      </div>
     </main>
   );
 }

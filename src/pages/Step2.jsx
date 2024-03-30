@@ -21,7 +21,7 @@ function Step2() {
   }, [setHouseSelection, setShowWinner, navigate]);
 
   return (
-    <main className="top-72 grid grid-cols-2 grid-rows-2 gap-8 sm:absolute sm:left-1/2 sm:-translate-x-1/2">
+    <main className="top-72 grid grid-cols-2 grid-rows-2 gap-8 sm:absolute sm:left-1/2 sm:top-60 sm:-translate-x-1/2">
       <div className="order-2 text-center sm:order-1">You picked</div>
       <div className="order-2 text-center sm:order-1">The house picked</div>
       <ShowSelectedItem selection={mySelection} />
