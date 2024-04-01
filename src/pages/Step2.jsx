@@ -17,7 +17,7 @@ function Step2() {
         navigate("/step3");
         setShowWinner(true);
       }, 1000);
-    }, 1000);
+    }, 500);
   }, [setHouseSelection, setShowWinner, navigate]);
 
   return (

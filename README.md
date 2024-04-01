@@ -20,7 +20,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [github.com/Saeadyou/rock-paper-scissors](https://github.com/Saeadyou/rock-paper-scissors)
-- Live Site URL: [rock-p-s-yousefi.vercel.app](https://rock-p-s-yousefi.vercel.app)
+- Live Site URL: [rock-p-s-yousefi.vercel.app](https://rps-ufi.vercel.app)
 
 ### Built with
 
