@@ -1,8 +1,20 @@
+import { useEffect, useRef } from "react";
+
 import { useData } from "../contexts/DataContext";
-import { useEffect } from "react";
 
 function Header() {
-  const { score, point } = useData();
+  const { point } = useData();
+
+  const score = useRef(
+    JSON.parse(window.localStorage.getItem("totalScore")) || 0,
+  );
+
+  useEffect(
+    function () {
+      window.localStorage.setItem("totalScore", score.current);
+    },
+    [score.current],
+  );
 
   useEffect(
     function () {

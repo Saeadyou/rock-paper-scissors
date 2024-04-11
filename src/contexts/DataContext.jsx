@@ -1,4 +1,4 @@
-import { createContext, useContext, useRef, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 const DataContext = createContext();
 
@@ -7,7 +7,6 @@ function DataProvider({ children }) {
   const [houseSelection, setHouseSelection] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [showWinner, setShowWinner] = useState(false);
-  const score = useRef(0);
 
   let point = 0;
   if (mySelection === "rock") {
@@ -31,7 +30,6 @@ function DataProvider({ children }) {
         houseSelection,
         setHouseSelection,
         point,
-        score,
         showModal,
         setShowModal,
         showWinner,
