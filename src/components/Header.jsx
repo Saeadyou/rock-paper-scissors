@@ -1,9 +1,15 @@
 import { useData } from "../contexts/DataContext";
+import { useEffect } from "react";
 
 function Header() {
-  const { score, point, showWinner } = useData();
+  const { score, point } = useData();
 
-  if (showWinner) score.current += point;
+  useEffect(
+    function () {
+      score.current += point;
+    },
+    [point],
+  );
 
   return (
     <header className="absolute left-1/2 top-10 flex w-[40rem] max-w-[80%] -translate-x-1/2 justify-between rounded-lg border-2 border-[#606E85] p-4">

@@ -1,5 +1,5 @@
-import { useData } from "../contexts/DataContext";
 import ShowSelectedItem from "../components/ShowSelectedItem";
+import { useData } from "../contexts/DataContext";
 import { useNavigate } from "react-router-dom";
 
 function Step3() {
@@ -10,7 +10,9 @@ function Step3() {
     setShowWinner,
     setHouseSelection,
   } = useData();
+
   const navigate = useNavigate();
+
   function handleClick() {
     navigate("/");
     setShowWinner(false);
