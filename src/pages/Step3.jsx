@@ -44,7 +44,7 @@ function Step3() {
           Play again
         </button>
       </div>
-      <div className="sm:row-start-2">
+      <div className="pointer-events-none sm:row-start-2">
         <ShowSelectedItem selection={houseSelection} />
       </div>
     </main>

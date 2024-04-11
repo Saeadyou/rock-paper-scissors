@@ -16,8 +16,8 @@ function Step2() {
       setTimeout(() => {
         navigate("/step3");
         setShowWinner(true);
-      }, 1000);
-    }, 500);
+      }, 700);
+    }, 300);
   }, [setHouseSelection, setShowWinner, navigate]);
 
   return (
